@@ -134,8 +134,8 @@ class ConfideUser extends Ardent implements UserInterface {
         $passwordConfirmation = array_get($params, 'password_confirmation', '');
 
         $passwordValidators = array(
-            'password' => static::$rules['password'],
-            'password_confirmation' => static::$rules['password_confirmation'],
+            'password' => self::$rules['password'],
+            'password_confirmation' => self::$rules['password_confirmation'],
         );
         $user = static::$app['confide.repository']->model();
         $user->unguard();
